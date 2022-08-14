@@ -1,12 +1,17 @@
+import { MouseEventHandler } from "react";
 import styled from "styled-components";
 import { BaseButton } from "./BaseButton";
 import { ButtonProps } from "./PrimaryButton";
 
-export const SecondaryButton = (props: ButtonProps) => {
-  const { children } = props;
+type SecondaryButtonProps = {
+  onClick: MouseEventHandler<HTMLButtonElement>
+}
+
+export const SecondaryButton = (props: ButtonProps & SecondaryButtonProps) => {
+  const { children, onClick } = props;
 
   return (
-    <SButton>{children}</SButton>
+    <SButton onClick={onClick}>{children}</SButton>
   )
 }
 

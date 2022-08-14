@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
@@ -22,7 +23,9 @@ export const Users = () => {
       <h1>ユーザ一覧ページです</h1>
       <SearchInput />
       <SUserArea>
-      {users.map((user) => (<UserCard key={user.id} user={user}/>))}
+        {users.map((user) => (
+          <UserCard key={user.id} user={user} />
+        ))}
       </SUserArea>
     </SContainer>
   );
@@ -42,4 +45,4 @@ const SUserArea = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
-`
+`;
