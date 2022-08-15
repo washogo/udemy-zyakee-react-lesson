@@ -1,9 +1,9 @@
-import { memo } from "react";
+import { memo } from 'react';
 
 const style = {
-  width: "100%",
-  height: "200px",
-  backgroundColor: "khaki",
+  width: '100%',
+  height: '200px',
+  backgroundColor: 'khaki',
 };
 
 type Props = {
@@ -11,13 +11,14 @@ type Props = {
   onClickClose: () => void;
 };
 
-export const ChildArea = memo((props: Props) => {
-  console.log("ChildArea");
+export const ChildArea = memo((props) => {
+  console.log('ChildArea');
+
   const { open, onClickClose } = props;
 
   const data = [...Array(2000).keys()];
   data.forEach(() => {
-    console.log("numnum");
+    console.log('numnum');
   });
 
   return (
