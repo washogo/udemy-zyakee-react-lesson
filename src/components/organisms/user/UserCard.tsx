@@ -17,7 +17,6 @@ export type UserCardProps = {
 }
 
 export const UserCard = memo((props: UserCardProps) => {
-  console.log("user card")
   const { user } = props;
   
   return (

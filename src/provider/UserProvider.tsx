@@ -5,7 +5,7 @@ type UserContextDefaultValue = {
   setUserInfo: React.Dispatch<React.SetStateAction<UserInfoState | undefined>>;
 }
 
-type UserInfoState = {
+export type UserInfoState = {
   isAdmin: boolean;
 }
 
