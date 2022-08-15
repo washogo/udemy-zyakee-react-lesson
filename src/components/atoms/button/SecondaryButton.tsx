@@ -4,7 +4,7 @@ import { BaseButton } from "./BaseButton";
 import { ButtonProps } from "./PrimaryButton";
 
 type SecondaryButtonProps = {
-  onClick: MouseEventHandler<HTMLButtonElement>
+  onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const SecondaryButton = (props: ButtonProps & SecondaryButtonProps) => {
