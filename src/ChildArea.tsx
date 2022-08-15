@@ -6,14 +6,12 @@ const style = {
   backgroundColor: 'khaki',
 };
 
-type Props = {
+interface Props {
   open: boolean;
   onClickClose: () => void;
-};
+}
 
-export const ChildArea = memo((props) => {
-  console.log('ChildArea');
-
+export const ChildArea = memo((props: Props) => {
   const { open, onClickClose } = props;
 
   const data = [...Array(2000).keys()];
