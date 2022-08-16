@@ -1,3 +1,7 @@
+# about lint-staged
+
+v10以降はデフォルトで git add -> git commit を含むため、v9のlatestを入れている
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
