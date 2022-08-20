@@ -8,9 +8,9 @@ export const Header: FC = memo(() => {
   const { onClose, onOpen, isOpen } = useDisclosure();
   const navigate = useNavigate();
 
-  const onClickHome = useCallback(() => navigate("/home"), [])
-  const onClickUserManagement = useCallback(() => navigate("/home/user_management"), [])
-  const onClickSetting = useCallback(() => navigate("/home/setting"), [])
+  const onClickHome = useCallback(() => navigate('/home'), []);
+  const onClickUserManagement = useCallback(() => navigate('/home/user_management'), []);
+  const onClickSetting = useCallback(() => navigate('/home/setting'), []);
 
   return (
     <>
@@ -35,7 +35,13 @@ export const Header: FC = memo(() => {
         </Flex>
         <MenuIconButton onOpen={onOpen} />
       </Flex>
-      <MenuDrawer onClose={onClose} isOpen={isOpen} onClickHome={onClickHome} onClickUserManagement={onClickUserManagement} onClickSetting={onClickSetting} />
+      <MenuDrawer
+        onClose={onClose}
+        isOpen={isOpen}
+        onClickHome={onClickHome}
+        onClickUserManagement={onClickUserManagement}
+        onClickSetting={onClickSetting}
+      />
     </>
   );
 });

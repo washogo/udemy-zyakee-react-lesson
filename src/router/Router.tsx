@@ -8,16 +8,16 @@ import { homeRoutes } from './HomeRoutes';
 export const Router: FC = () => {
   return (
     <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="home">
-          {homeRoutes.map((route) => (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={<HeaderLayout>{route.element}</HeaderLayout>}
-            />
-          ))}
-        </Route>
+      <Route path="/" element={<Login />} />
+      <Route path="home">
+        {homeRoutes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<HeaderLayout>{route.element}</HeaderLayout>}
+          />
+        ))}
+      </Route>
       <Route path="*" element={<Page404 />} />
     </Routes>
   );

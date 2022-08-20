@@ -90,11 +90,11 @@ export const UserDetailModal: FC<Props> = memo((props) => {
             </FormControl>
           </Stack>
         </ModalBody>
-        {isAdmin && <ModalFooter>
-          <PrimaryButton onClick={onClickUpdateUserInfo}>
-            Update
-          </PrimaryButton>
-        </ModalFooter>}
+        {isAdmin && (
+          <ModalFooter>
+            <PrimaryButton onClick={onClickUpdateUserInfo}>Update</PrimaryButton>
+          </ModalFooter>
+        )}
       </ModalContent>
     </Modal>
   );

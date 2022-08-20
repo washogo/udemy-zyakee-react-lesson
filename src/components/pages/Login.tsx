@@ -7,9 +7,12 @@ export const Login: FC = memo(() => {
   const [userId, setUserId] = useState('');
   const { login, loading } = useAuth();
 
-  const onChangeInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setUserId(e.target.value);
-  }, [setUserId]);
+  const onChangeInput = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setUserId(e.target.value);
+    },
+    [setUserId]
+  );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const onClickLogin = useCallback(() => login(userId), [userId]);
